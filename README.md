@@ -1,1 +1,1 @@
-# veelgames
+# veelgames_puzzle
