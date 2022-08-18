@@ -1,0 +1,382 @@
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  line-height 1
+  font-family 'Covid19', sans-serif
+  font-weight 400
+  &:before
+    box-sizing border-box
+h1, h2, h3, h4, h5, h6
+  margin 0
+ul
+  list-style none
+a
+  text-decoration none
+@font-face {
+    font-family 'Covid19' 
+    src url(../fonts/Covid19.ttf)
+   }
+.wrapper
+  min-height 100vh
+  display flex
+  flex-direction column
+  justify-content space-between
+  background-image url(../img/bg.jpg)
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+  overflow hidden
+  +mq(0, 768px)
+    background-image url(../img/bg-mob.jpg)
+.container
+  max-width 1200px
+  margin 0 auto
+  padding 0 15px
+.login
+  display block
+  position relative
+  width 109px
+  height 43px
+  border 1px solid #fff
+  transform skew(-14deg)
+  +mq(0, 768px)
+    height 35px
+    width 88px
+  +element(inner)
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) skew(14deg)
+    font-size 16px
+    color #fff
+  +element(desc)
+    display block
+    font-family 'Inter', sans-serif
+    font-size 13px
+    color #fff
+    margin-bottom 8px
+    +mq(0, 768px)
+      font-size 11px
+    +modifier(f)
+      +mq(0, 768px)
+        font-size 14px
+  +element(group)
+    +modifier(h)
+      margin-top -45px
+      +mq(0, 768px)
+        position absolute
+        top 10px
+        right 0
+        margin-top 0
+    +modifier(f)
+      display flex
+      align-items center
+      gap 20px
+.logo
+  position relative
+  width 242px
+  height 102px
+  left -25px
+  background-image url(../img/logo.png)
+  background-size 100% auto
+  background-repeat no-repeat
+  background-position center
+  +mq(0, 768px)
+    max-width 208px
+    margin-top 10px
+.header
+  +element(inner)
+    position relative
+    height 148px
+    display flex
+    justify-content space-between
+    align-items center
+    z-index 2
+    +mq(0, 768px)
+      height auto
+      align-items flex-start
+.main
+  +element(title)
+    font-size 104px
+    letter-spacing -3px
+    color #006ad7
+    text-shadow 0 0 49px #000
+    +mq(0, 768px)
+      font-size 46px
+  +element(subtitle)
+    font-size 38px
+    letter-spacing -1px
+    color #fff
+    +mq(0, 768px)
+      font-size 17px
+  +element(holder)
+    display flex
+    justify-content space-between
+    +mq(0, 1125px)
+      flex-direction column-reverse   
+  +element(left)
+    min-height 737px
+    position relative
+    display flex
+    flex-direction column
+    justify-content flex-end
+    padding-bottom 40px
+    +mq(0, 1125px)
+      display none
+  +element(left-img)
+    height 875px
+    width 776px
+    position absolute
+    top -103px
+    left -161px
+    background-image url(../img/left-img.png)
+    background-size 100% auto
+    background-repeat no-repeat
+  +element(left-p)
+    max-width 340px
+    position relative
+    font-size 18px
+    color #fff
+    line-height 1.2
+    margin-left 100px
+    z-index 1
+  +element(right)
+    position relative
+    max-width 670px
+    z-index 1
+    +mq(0, 1125px)
+      max-width 100%
+  +element(title-group)
+    position relative
+    margin-bottom 88px
+    z-index 1
+    +mq(0, 1125px)
+      display flex
+      flex-direction column
+      align-items center
+      margin-bottom 0
+  +element(right-item)
+    padding-left 102px
+    +mq(0, 1125px)
+      padding 0
+.input
+  position relative
+  width 100%
+  height 56px
+  line-height 56px
+  border-radius 27px
+  background-color #180318
+  font-family 'Inter', sans-serif
+  color #fff
+  border none
+  outline none
+  font-size 16px
+  padding 0 10px 0 40px
+  margin-bottom 10px
+  +mq(0, 768px)
+    height 45px
+    line-height 45px
+    padding 0 10px 0 20px
+  +element(top-text)
+    white-space nowrap
+    font-size 17px
+    color #ffcc00
+    text-align center
+    line-height 1.2
+    margin-bottom 20px
+    +mq(0, 768px)
+      white-space normal
+      font-size 14px
+  +element(group)
+    position relative
+    max-width 470px
+    margin-bottom 39px
+    +mq(0, 1125px)
+      margin 0 auto 39px
+  &::placeholder
+    color #999999
+    font-family 'Inter', sans-serif
+.btn
+  width 100%
+  font-size 60px
+  letter-spacing -1px
+  color #fff
+  line-height 96px
+  border-radius 48px
+  background-color #00a2ff
+  border 2px solid #a5defe
+  box-shadow 0px 0px 21px 0px rgba(185, 195, 255, 1) inset, 0px 0px 49px 0px rgba(1, 185, 245, .23)
+  cursor pointer
+  transition all .3s ease-in-out
+  +mq(0, 768px)
+    line-height 77px
+    font-size 36px
+  &:hover
+    background-color #04517c
+  +element(bottom)
+    font-family 'Inter', sans-serif
+    font-size 14px
+    color #fff
+    font-weight 700
+    text-align center
+    margin-top 9px
+.checkbox
+  height 1px
+  width 1px
+  opacity 0
+  position absolute
+  +element(text)
+    font-family 'Inter', sans-serif
+    font-size 12px
+    color #787878
+    font-weight 300
+    display block
+    margin-left 40px
+    line-height 1.2
+    user-select none
+    +mq(0, 768px)
+      font-size 10px
+  +element(label)
+    position relative
+    &:before
+      position absolute
+      content ""
+      display block
+      height 21px
+      width 21px
+      left 0
+      top 0
+      border 2px solid #fff
+      border-radius 4px
+      background #180318
+      transition all .3s ease-in-out
+    &:after
+      content ""
+      display none
+      position absolute
+      left 7px
+      top 3px
+      width 6px
+      height 10px
+      border solid #fff
+      border-width 0 2px 2px 0
+      transform: rotate(45deg);
+  &:checked + .checkbox__label:after
+    display inline-block
+  +element(wrapper)
+    +mq(0, 1125px)
+      max-width 470px
+      margin 0 auto
+    & + &
+      margin-top 23px
+      +mq(0, 1125px)
+        margin-top 10px
+        margin-bottom 20px
+.footer
+  +element(inner)
+    display flex
+    justify-content flex-end
+    margin-bottom 36px
+    +mq(0, 1125px)
+      justify-content center
+  +element(top)
+    min-width 55%
+    display flex
+    justify-content space-between
+    align-items center
+    padding-top 20px
+    border-top 1px solid #565656
+    +mq(0, 1125px)
+      border none
+      min-width 100%
+      justify-content center
+  +element(copyright)
+    font-family 'Inter', sans-serif
+    font-size 12px
+    color #484848
+    margin-left 50px
+    +mq(0, 768px)
+      display none
+    +modifier(mob)
+      display none
+      +mq(0, 768px)
+        display block
+        margin-left 0
+  +element(holder-link)
+    display flex
+    align-items center
+    gap 20px
+    +mq(0, 768px)
+      margin-bottom 15px
+      justify-content space-between
+      width 100%
+      gap initial
+  +element(link)
+    font-family 'Inter', sans-serif
+    font-size 11px
+    line-height 16px
+    text-decoration underline
+    color #fff
+    font-weight 300
+  +element(bottom)
+    background-color #000
+  +element(bottom-inner)
+    display flex
+    justify-content space-between
+    align-items center
+    padding 17px 0
+    +mq(0, 768px)
+      flex-direction column
+  +element(p)
+    max-width 68%
+    font-family 'Inter', sans-serif
+    font-size 11px
+    color #484848
+    font-weight 300
+    line-height 1.2
+    +mq(0, 768px)
+      max-width 100%
+      font-size 9px
+.pay
+  +element(holder)
+    position absolute
+    top 102px
+    right -89px
+    display flex
+    flex-direction column
+    gap 16px
+    +mq(0, 768px)
+      display none
+    +modifier(mob)
+      display none
+      max-width 470px
+      margin 0 auto
+      position static
+      flex-direction row
+      justify-content flex-end
+      align-items center
+      gap 60px
+      margin-bottom 38px
+      +mq(0, 768px)
+        display flex
+.mob
+  +element(img-wrap)
+    display none
+    position relative
+    height 250px
+    +mq(0, 1125px)
+      display block
+  +element(img)
+    height 473px
+    width 423px
+    max-width 400px
+    position absolute
+    top 46%
+    left 50%
+    transform translate(-50%, -50%)
+    background-image url(../img/img-mob.png)
+    background-size 100% auto
+    background-repeat no-repeat
+    background-position center
+    
